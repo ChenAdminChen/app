@@ -10,7 +10,7 @@
     </data>
 
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -38,7 +38,7 @@
 
             <fragment
                 android:id="@+id/测试"
-                android:name="com.example.demo_2.BlankFragment"
+                android:name="com.example.demo_2.fragment.BlankFragment"
                 android:layout_width="match_parent"
                 android:layout_height="77dp" />
 
@@ -63,5 +63,5 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

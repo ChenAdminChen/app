@@ -1,14 +1,13 @@
-package com.example.demo_2
+package com.example.demo_2.fragment
 
 import android.content.Context
-import android.databinding.DataBindingUtil
 import android.net.Uri
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.demo_2.databinding.ActivityUserBinding
+import com.example.demo_2.R
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -25,7 +24,7 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  *
  */
-class BlankFragment : Fragment() {
+class BlankFragment : androidx.fragment.app.Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null

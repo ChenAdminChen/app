@@ -1,0 +1,24 @@
+# demo_2的介绍
+   
+## Activity 跳转
+
++ `MainActivity.kt`
+  在该activity内存在activity的跳转
+
+## fragment 跳转
+
++ `FragmentReplaceActivity.kt`
+  存在fragment的切换
+
+## Room
+
++ `RoomTestActivity.kt` and `NewWordActivity.kt`的页面展示
++ `WordDao.kt` and `WordListAdapter.kt` and `Word.kt` and `WordViewModel.kt`
+and `WordViewModelFactory.kt` and `WordRepository.kt` and `WordRoomDatabase.kt`操作数据库及UI更新
+
+## DataBinding
+
++ `UserActivity.kt`使用DataBinding的知识
+
+## ViewAdapter
+

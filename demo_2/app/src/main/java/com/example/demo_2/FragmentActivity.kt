@@ -1,11 +1,10 @@
 package com.example.demo_2
 
-import android.net.Uri
 import android.os.Bundle
-import android.support.design.widget.Snackbar
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.MenuItem
-import com.example.demo_2.R
+import com.example.demo_2.fragment.FragmentA
+import com.example.demo_2.fragment.FragmentB
 
 import kotlinx.android.synthetic.main.activity_fragment.*
 

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -22,7 +22,7 @@
 
         <!--<-->
             <!--android:id="@+id/container_a"-->
-            <!--android:name="com.example.demo_2.FragmentA"-->
+            <!--android:name="com.example.demo_2.fragment.FragmentA"-->
             <!--android:layout_width="383dp"-->
             <!--android:layout_height="238dp"-->
             <!--android:layout_marginStart="8dp"-->
@@ -51,7 +51,7 @@
             <!--app:layout_constraintBottom_toBottomOf="parent"-->
             <!--app:layout_constraintEnd_toEndOf="parent"-->
             <!--app:layout_constraintStart_toEndOf="@+id/button" />-->
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 

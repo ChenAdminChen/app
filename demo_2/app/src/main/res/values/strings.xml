@@ -1,0 +1,48 @@
+<!-- 用于填充头部信息 -->
+
+<!-- 用于定义字符串常量 -->
+<resources>
+    <string name="app_name">demo_2</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_person_show">PersonShowActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!---->
+    <string name="menu_title1">用户信息</string>
+    <string name="menu_title2">主页</string>
+    <string name="menu_title3">fragment_a</string>
+    <string name="menu_title4">fragment_b</string>
+    <string name="title_activity_user">UserActivity</string>
+
+
+    <string name="search_content">请输入搜索内容</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_fragment">FragmentActivity</string>
+    <string name="title_activity_fragment_replace">FragmentReplaceActivity</string>
+    <string name="title_activity_room_test">RoomTestActivity</string>
+
+    <style name="word_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">26dp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:paddingLeft">8dp</item>
+    </style>
+
+    <string name="title_activity_new_word">NewWordActivity</string>
+
+    <string name="hint_word">Word...</string>
+    <string name="button_save">Save</string>
+    <string name="empty_not_saved">Word not saved because it is empty.</string>
+
+</resources>

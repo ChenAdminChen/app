@@ -1,34 +1,32 @@
-package com.example.demo_2
+package com.example.demo_2.fragment
 
 import android.content.Context
-import android.databinding.DataBindingUtil
-import android.net.Uri
+import androidx.databinding.DataBindingUtil
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import com.example.demo_2.R
 import com.example.demo_2.databinding.FragmentABinding
-import com.example.demo_2.databinding.FragmentBBinding
-
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+//private const val ARG_PARAM1 = "param1"
+//private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
  * Activities that contain this fragment must implement the
- * [FragmentB.OnFragmentInteractionListener] interface
+ * [FragmentA.OnFragmentInteractionListener] interface
  * to handle interaction events.
- * Use the [FragmentB.newInstance] factory method to
+ * Use the [FragmentA.newInstance] factory method to
  * create an instance of this fragment.
  *
  */
-class FragmentB : Fragment() {
+class FragmentA : androidx.fragment.app.Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -39,35 +37,57 @@ class FragmentB : Fragment() {
 
 //    private lateinit var listenerA:FragmentAListener
 
-    private lateinit var binding: FragmentBBinding
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var binding: FragmentABinding
 
+
+    //
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        arguments?.let {
+//            param1 = it.getString(ARG_PARAM1)
+//            param2 = it.getString(ARG_PARAM2)
+//        }
+//
+//
+//    }
+
+
+    //view
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_b, container, false)
+//        return TextView(activity).apply {
+//            setText(R.string.hello_blank_fragment)
+//        }
 
-        buttonOk = binding.buttonOk
-        editText = binding.editText
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_a, container, false)
 
-        buttonOk.setOnClickListener {
+        buttonOk = binding.buttonOkA
+        editText = binding.editTextA
+
+        binding.buttonOkA.setOnClickListener {
 
             var input: CharSequence = editText.text
 
-            listener!!.onInputBSent(input)
-
+            println("$input" + "fragment_a")
+            listener!!.onInputASent(input)
+            println( "fragment_a")
         }
+//        buttonOk.setOnClickListener {
+//            @Override
+//            fun onClick() {
+//                var input: CharSequence = editText.text
+//
+//                println("$input" + "fragment_a")
+//                listener!!.onInputASent(input)
+//            }
+//        }
 
         return binding.root
-//        return inflater.inflate(R.layout.fragment_b, container, false)
+
+//        return inflater.inflate(R.layout.fragment_a, container, false)
     }
+
 
     public fun updateEditText(newText: CharSequence) {
         editText.setText(newText)
@@ -75,22 +95,26 @@ class FragmentB : Fragment() {
 
     // TODO: Rename method, update argument and hook method into UI event
 //    fun onButtonPressed(uri: Uri) {
-//        listener?.onFragmentBInteraction(uri)
+//        listener.onFragmentAInteraction(uri)
 //    }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
+
+
         if (context is OnFragmentInteractionListener) {
             listener = context
         } else {
             throw RuntimeException(context.toString() + " must implement OnFragmentInteractionListener")
         }
+
     }
 
     override fun onDetach() {
         super.onDetach()
         listener = null
     }
+
 
     /**
      * This interface must be implemented by activities that contain this
@@ -105,10 +129,14 @@ class FragmentB : Fragment() {
      */
     interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-//        fun onFragmentBInteraction(uri: Uri)
+//        fun onFragmentAInteraction(uri: Uri)
 
-        fun onInputBSent(input: CharSequence)
+        fun onInputASent(input: CharSequence)
     }
+
+//    interface FragmentAListener{
+//        fun onInputASent(input:CharSequence)
+//    }
 
 //    companion object {
 //        /**
@@ -117,12 +145,12 @@ class FragmentB : Fragment() {
 //         *
 //         * @param param1 Parameter 1.
 //         * @param param2 Parameter 2.
-//         * @return A new instance of fragment FragmentB.
+//         * @return A new instance of fragment FragmentA.
 //         */
 //        // TODO: Rename and change types and number of parameters
 //        @JvmStatic
 //        fun newInstance(param1: String, param2: String) =
-//                FragmentB().apply {
+//                FragmentA().apply {
 //                    arguments = Bundle().apply {
 //                        putString(ARG_PARAM1, param1)
 //                        putString(ARG_PARAM2, param2)
