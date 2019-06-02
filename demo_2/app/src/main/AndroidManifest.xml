@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.demo_2">
 
+    <!--请求android 的 permission internet-->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,7 +17,7 @@
         <activity
             android:name=".NewWordActivity"
             android:label="@string/title_activity_new_word"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".RoomTestActivity"
             android:label="@string/title_activity_room_test"

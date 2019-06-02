@@ -12,6 +12,101 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
+
+
+        //rxjava2
+        implementation 'io.reactivex.rxjava2:rxjava:2.2.2'
+        implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+
+        // retrofit2
+        implementation 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
+        implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
+
+        // eventbus
+        implementation 'org.greenrobot:eventbus:3.0.0'
+
+        //mqtt
+        implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
+        implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
+
+        // log
+        implementation 'org.slf4j:slf4j-api:1.7.25'
+        implementation 'com.github.tony19:logback-android:1.1.1-9'
+
+        //    implementation('com.github.tony19:logback-android-classic:1.1.1-6') {
+
+        //        // workaround issue #73
+
+        //        exclude group: 'com.google.android', module: 'android'
+
+        //    }
+
+        //    implementation 'com.orhanobut:logger:1.15'
+
+        //dagger
+        implementation 'com.google.dagger:dagger:2.16'
+        implementation 'com.google.dagger:dagger-android:2.16'
+        compileOnly 'javax.annotation:jsr250-api:1.0'
+        annotationProcessor 'com.google.dagger:dagger-compiler:2.16'
+        annotationProcessor 'com.google.dagger:dagger-android-processor:2.11'
+
+        // lombok
+        compileOnly 'org.projectlombok:lombok:1.18.2'
+        annotationProcessor 'org.projectlombok:lombok:1.18.2'
+
+        //SqlBrite
+        implementation 'com.squareup.sqlbrite2:sqlbrite:2.0.0'
+
+        //RxPermission
+        implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4'
+
+        //
+        implementation 'com.hyman:flowlayout-lib:1.1.1'
+
+        //
+        implementation 'com.aliyun.dpa:oss-android-sdk:2.7.3'
+
+        // apache commons math
+//    implementation 'org.apache.commons:commons-math3:3.6.1'
+
+        //腾讯bugly
+        implementation 'com.tencent.bugly:crashreport:2.6.6.1'
+
+        //leakcanary
+        releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+        debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+        testImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+
+        // for fast hash
+        implementation 'org.lz4:lz4-java:1.4.1'
+
+        // apache common text
+        //    testImplementation 'org.apache.commons:commons-text:1.2'
+
+        // testing
+        androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+            exclude group: 'com.android.support', module: 'support-annotations'
+        })
+        testImplementation 'junit:junit:4.12'
+
+        //调试模式下使用
+        debugImplementation 'com.facebook.stetho:stetho:1.5.0'
+        debugImplementation 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+
+        //
+
+        //    implementation(project(':todaystepcounterlib'))
+        implementation(project(':todaystepcounterlib'), {
+            exclude group: 'com.google.code', module: 'microlog4android'
+            exclude group: 'org.slf4j', module: 'slf4j-api'
+        })
+
+        //okhttp的log信息
+        implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+
+        //
+        implementation 'io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.2.0'
+
     }
 }
 
