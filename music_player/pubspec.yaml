@@ -24,7 +24,18 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
 
-dev_dependencies:
+  fluttery: 
+    path: plugins/fluttery
+
+  # fluttery_audio: 0.0.3
+
+  fluttery_audio: 
+    path: plugins/fluttery_audio
+
+  # fluttery_audio_visualizer:
+  #   path: plugins/fluttery_audio
+
+dev_dependencies: 
   flutter_test:
     sdk: flutter
 
